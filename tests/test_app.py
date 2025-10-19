@@ -54,4 +54,4 @@ def test_balance_2(app, client):
     res = client.get('/')
     assert res.status_code == 200
     expected = {'balance': 200}
-    assert expected == json.loads(res.get_data(as_text=True))
+    assert expected == json.loads(res.get_data(as_text=False))
